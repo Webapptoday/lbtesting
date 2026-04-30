@@ -1,5 +1,5 @@
 // ============================================================
-//  LIQUID BIOPSY RESEARCH — JavaScript
+//  LIQUID BIOPSY RESEARCH - JavaScript
 //  Scroll animations | Counter | Particles | Navbar | Charts
 // ============================================================
 
