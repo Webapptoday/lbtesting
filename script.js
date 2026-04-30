@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initHamburger();
+  initDropdowns();
   initScrollReveal();
   initCounters();
   initParticles();
@@ -54,6 +55,63 @@ function initHamburger() {
       spans[1].style.opacity   = '';
       spans[2].style.transform = '';
     });
+  });
+}
+
+// ── NAV DROPDOWN ─────────────────────────────────────────────
+function initDropdowns() {
+  const isMobile = () => window.matchMedia('(max-width: 640px)').matches;
+  document.querySelectorAll('.nav-dropdown').forEach(drop => {
+    const toggle = drop.querySelector('.nav-dropdown-toggle');
+    const menu = drop.querySelector('.nav-dropdown-menu');
+    if (!toggle || !menu) return;
+
+    // Desktop: open on hover/click, Mobile: open on click
+    let open = false;
+    const openDropdown = () => {
+      drop.classList.add('open');
+      open = true;
+    };
+    const closeDropdown = () => {
+      drop.classList.remove('open');
+      open = false;
+    };
+
+    // Desktop: hover/click
+    toggle.addEventListener('click', e => {
+      if (isMobile()) {
+        e.preventDefault();
+        open ? closeDropdown() : openDropdown();
+      }
+    });
+    drop.addEventListener('mouseenter', () => {
+      if (!isMobile()) openDropdown();
+    });
+    drop.addEventListener('mouseleave', () => {
+      if (!isMobile()) closeDropdown();
+    });
+
+    // Keyboard accessibility
+    toggle.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        open ? closeDropdown() : openDropdown();
+      }
+      if (e.key === 'Escape') closeDropdown();
+    });
+    menu.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeDropdown();
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', e => {
+      if (!drop.contains(e.target)) closeDropdown();
+    });
+  });
+
+  // Close all dropdowns on resize (to reset state)
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('.nav-dropdown').forEach(drop => drop.classList.remove('open'));
   });
 }
 
