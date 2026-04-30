@@ -16,18 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // ── ADVANCED ANIMATIONS ─────────────────────────────────────
 function initAdvancedAnimations() {
-  // Staggered text reveal (letter by letter)
-  document.querySelectorAll('.reveal-stagger-text').forEach(el => {
-    const text = el.textContent;
-    el.textContent = '';
-    text.split('').forEach((char, i) => {
-      const span = document.createElement('span');
-      span.textContent = char;
-      span.className = 'reveal-stagger';
-      span.style.transitionDelay = (i * 0.035) + 's';
-      el.appendChild(span);
-    });
-  });
+  // (Removed broken staggered text logic)
   // Reveal on scroll
   const revealEls = document.querySelectorAll('.reveal-fade, .reveal-stagger');
   if ('IntersectionObserver' in window) {
