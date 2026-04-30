@@ -12,7 +12,69 @@ document.addEventListener('DOMContentLoaded', () => {
   initParticles();
   initBarCharts();
   initNavActiveState();
+  initAdvancedAnimations();
 });
+// ── ADVANCED ANIMATIONS ─────────────────────────────────────
+function initAdvancedAnimations() {
+  // Staggered text reveal (letter by letter)
+  document.querySelectorAll('.reveal-stagger-text').forEach(el => {
+    const text = el.textContent;
+    el.textContent = '';
+    text.split('').forEach((char, i) => {
+      const span = document.createElement('span');
+      span.textContent = char;
+      span.className = 'reveal-stagger';
+      span.style.transitionDelay = (i * 0.035) + 's';
+      el.appendChild(span);
+    });
+  });
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal-fade, .reveal-stagger');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => obs.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('visible'));
+  }
+
+  // Parallax effect for hero visuals
+  const parallaxEls = document.querySelectorAll('.parallax');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    parallaxEls.forEach(el => {
+      el.style.transform = `translateY(${y * 0.18}px)`;
+    });
+  });
+
+  // Animated cursor effect
+  let cursor = document.querySelector('.cursor-effect');
+  if (!cursor) {
+    cursor = document.createElement('div');
+    cursor.className = 'cursor-effect';
+    document.body.appendChild(cursor);
+  }
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = (e.clientX - 18) + 'px';
+    cursor.style.top = (e.clientY - 18) + 'px';
+    cursor.classList.add('active');
+  });
+  document.addEventListener('mouseleave', () => {
+    cursor.classList.remove('active');
+  });
+  // Button hover effect
+  document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+    btn.classList.add('btn-animated');
+    btn.addEventListener('mouseenter', () => cursor.classList.add('active'));
+    btn.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+  });
+}
 
 // ── NAVBAR SCROLL EFFECT ─────────────────────────────────────
 function initNavbar() {
