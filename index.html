@@ -52,10 +52,35 @@
         <blockquote class="hero-question">&ldquo;Detecting cancer biomarkers in the blood of asymptomatic patients is a mathematical and biological challenge that no test has fully solved.&rdquo;</blockquote>
         <div class="hero-cta-group">
           <a href="overview.html" class="btn-primary btn-animated">Explore the Science &rarr;</a>
-          <a href="research-analysis.html" class="btn-secondary btn-animated">Read the Analysis</a>
+          <button class="btn-secondary btn-animated" id="faqTrigger">Frequently Asked Questions</button>
         </div>
       </div>
       <div class="hero-visual">
+          <!-- FAQ Overlay -->
+          <div class="faq-overlay" id="faqOverlay" style="display:none;">
+            <div class="faq-modal">
+              <button class="faq-close" id="faqClose" aria-label="Close FAQ">&times;</button>
+              <h2 class="faq-title">Frequently Asked Questions</h2>
+              <div class="faq-list">
+                <div class="faq-item">
+                  <button class="faq-question">What is a liquid biopsy?</button>
+                  <div class="faq-answer">A liquid biopsy is a non-invasive test that detects cancer-related genetic and molecular markers in blood, helping to identify cancer at early stages.</div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-question">How accurate are liquid biopsies?</button>
+                  <div class="faq-answer">Accuracy varies by cancer type and stage. While promising, liquid biopsies are most reliable for monitoring and less so for early detection in asymptomatic patients.</div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-question">Are liquid biopsies used for screening?</button>
+                  <div class="faq-answer">Currently, they are mainly used for monitoring and guiding treatment, not for broad population screening due to sensitivity and specificity limitations.</div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-question">What are the main benefits?</button>
+                  <div class="faq-answer">They are non-invasive, can be repeated over time, and provide molecular information that can guide personalized treatment.</div>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="hero-image-wrap">
           <svg class="hero-dna" viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <defs>

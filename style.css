@@ -678,6 +678,70 @@ ul, ol { padding-left:1.5rem; }
 .stagger.visible > *:nth-child(6){opacity:1;transform:translateY(0);transition-delay:.65s}
 
 /* ── ADVANCED ANIMATIONS ─────────────────────────────────── */
+/* ── FAQ OVERLAY ───────────────────────────────────────────── */
+.faq-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(8,8,8,0.88);
+  display: flex; align-items: center; justify-content: center;
+  animation: fadeInBg 0.4s cubic-bezier(.4,1.6,.6,1);
+}
+.faq-modal {
+  background: var(--bg-card2);
+  border-radius: var(--r-xl);
+  box-shadow: 0 8px 48px rgba(0,0,0,0.45);
+  padding: 2.5rem 2rem 2rem;
+  max-width: 480px; width: 100%;
+  position: relative;
+  animation: modalPop 0.5s cubic-bezier(.4,1.6,.6,1);
+}
+.faq-title {
+  font-family: var(--f-serif);
+  font-size: 1.5rem;
+  color: var(--cr-lt);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.faq-close {
+  position: absolute; top: 1.1rem; right: 1.3rem;
+  background: none; border: none; color: var(--tx2);
+  font-size: 2rem; cursor: pointer;
+  transition: color var(--ease);
+  z-index: 1;
+}
+.faq-close:hover { color: var(--cr-lt); }
+.faq-list { display: flex; flex-direction: column; gap: 1.1rem; }
+.faq-item { border-radius: var(--r-md); background: var(--bg-card); box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.faq-question {
+  width: 100%; background: none; border: none; color: var(--tx);
+  font-family: var(--f-sans); font-size: 1.05rem; font-weight: 600;
+  padding: 1.1rem 1.2rem; text-align: left; cursor: pointer;
+  border-radius: var(--r-md);
+  transition: background var(--ease), color var(--ease);
+}
+.faq-question:hover, .faq-item.open .faq-question { background: var(--cr-sub); color: var(--cr-lt); }
+.faq-answer {
+  max-height: 0; overflow: hidden; opacity: 0;
+  padding: 0 1.2rem; font-size: 0.98rem; color: var(--tx2);
+  transition: max-height 0.38s cubic-bezier(.4,1.6,.6,1), opacity 0.38s cubic-bezier(.4,1.6,.6,1);
+}
+.faq-item.open .faq-answer {
+  max-height: 200px; opacity: 1; padding-bottom: 1.1rem;
+}
+@keyframes fadeInBg { from { opacity: 0; } to { opacity: 1; } }
+@keyframes modalPop { 0% { transform: scale(0.92) translateY(40px); opacity: 0; } 100% { transform: scale(1) translateY(0); opacity: 1; } }
+
+/* ── ANIMATED DROPDOWN ───────────────────────────────────── */
+.nav-dropdown-menu {
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.38s cubic-bezier(.4,1.6,.6,1), transform 0.38s cubic-bezier(.4,1.6,.6,1);
+}
+.nav-dropdown.open > .nav-dropdown-menu {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
 .reveal-fade {
   opacity: 0;
   transform: translateY(40px) scale(0.98);
