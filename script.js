@@ -53,26 +53,9 @@ function initAdvancedAnimations() {
     });
   });
 
-  // Animated cursor effect
-  let cursor = document.querySelector('.cursor-effect');
-  if (!cursor) {
-    cursor = document.createElement('div');
-    cursor.className = 'cursor-effect';
-    document.body.appendChild(cursor);
-  }
-  document.addEventListener('mousemove', e => {
-    cursor.style.left = (e.clientX - 18) + 'px';
-    cursor.style.top = (e.clientY - 18) + 'px';
-    cursor.classList.add('active');
-  });
-  document.addEventListener('mouseleave', () => {
-    cursor.classList.remove('active');
-  });
-  // Button hover effect
+  // Button hover effect (keep animation, remove cursor logic)
   document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
     btn.classList.add('btn-animated');
-    btn.addEventListener('mouseenter', () => cursor.classList.add('active'));
-    btn.addEventListener('mouseleave', () => cursor.classList.remove('active'));
   });
 }
 

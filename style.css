@@ -729,23 +729,6 @@ ul, ol { padding-left:1.5rem; }
   width: 220%;
   height: 220%;
 }
-.cursor-effect {
-  pointer-events: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  background: rgba(196,18,48,0.13);
-  border: 2px solid var(--cr-lt);
-  z-index: 9999;
-  mix-blend-mode: lighten;
-  opacity: 0;
-  transition: opacity 0.2s, transform 0.2s;
-}
-.cursor-effect.active {
-  opacity: 1;
-  transform: scale(1.2);
-}
 
 /* ── HERO INIT ANIMATIONS ────────────────────────────────── */
 .hero-text > * { animation:fade-up .85s ease forwards; opacity:0; }
