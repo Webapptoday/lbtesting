@@ -1,380 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Key scientific studies on liquid biopsy and circulating biomarkers for cancer detection, organized by research question and findings.">
-    <meta name="keywords" content="liquid biopsy studies, cancer research, ctDNA studies, clinical trials">
-    <title>Key Studies - Liquid Biopsy Research</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detailed breakdowns of landmark liquid biopsy studies including CancerSEEK, Galleri, DYNAMIC, and ctDNA monitoring trials.">
+  <title>Key Studies &mdash; Liquid Biopsy Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <h1>Liquid Biopsy Research</h1>
-                <p class="nav-tagline">Early Cancer Detection</p>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="overview.html" class="nav-link">Overview</a></li>
-                <li><a href="research-analysis.html" class="nav-link">Research Analysis</a></li>
-                <li><a href="key-studies.html" class="nav-link active">Key Studies</a></li>
-                <li><a href="sources.html" class="nav-link">Sources</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-            </ul>
-        </div>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-brand">
+          <span class="site-title">Liquid Biopsy Research</span>
+          <span class="nav-tagline">Early Cancer Detection</span>
+        </a>
+        <ul class="nav-menu" id="navMenu"><li><a href="index.html" class="nav-link">Home</a></li>
+<li><a href="overview.html" class="nav-link">Overview</a></li>
+<li><a href="research-analysis.html" class="nav-link">Research Analysis</a></li>
+<li><a href="key-studies.html" class="nav-link active">Key Studies</a></li>
+<li><a href="sources.html" class="nav-link">Sources</a></li>
+<li><a href="about.html" class="nav-link">About</a></li></ul>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <h2>Key Studies & Clinical Trials</h2>
-        <p class="page-subtitle">Landmark research shaping our understanding of liquid biopsy and early cancer detection</p>
+  <section class="page-header">
+    <div class="page-header-inner">
+      <span class="section-eyebrow">Evidence Base</span>
+      <h2>Key Studies &amp; Clinical Trials</h2>
+      <p class="page-subtitle">Landmark research shaping our understanding of liquid biopsy. Each study is summarized with findings, methods, limitations, and why it matters.</p>
+    </div>
+  </section>
+
+  <main class="content-container">
+    <p class="intro-text">Six high-impact studies across early detection, treatment monitoring, and screening feasibility. Every claim on this site is traceable to one of these or the sources listed on the bibliography page.</p>
+
+    <!-- STUDY 1 -->
+    <section class="content-section reveal">
+      <h3>Early Detection &amp; Multi-Cancer Tests</h3>
+
+      <div class="study-card">
+        <div class="study-header">
+          <h4>CancerSEEK: Multi-Analyte Blood Test for Early Cancer Detection</h4>
+          <span class="study-year">Cohen et al., 2018</span>
+        </div>
+        <div class="study-content">
+          <div class="study-detail">
+            <strong>Research Question</strong>
+            <p>Can a single blood test combining protein biomarkers and ctDNA mutations detect non-metastatic cancers across eight cancer types?</p>
+          </div>
+          <div class="study-detail">
+            <strong>Study Design</strong>
+            <p>Case-control; 1,005 patients with Stage I&ndash;III cancers (8 types) vs. 812 healthy controls. Tested 8 protein biomarkers + 16 ctDNA hotspot mutations.</p>
+          </div>
+          <div class="study-detail">
+            <strong>Main Findings</strong>
+            <ul>
+              <li>Overall sensitivity: 70% (range 33% [breast] to 98% [ovarian])</li>
+              <li>Specificity: 99% (7 false positives in 812 controls)</li>
+              <li>Correctly identified tissue of origin in 83% of test-positive cases</li>
+              <li>Stage I sensitivity notably lower: ~40% overall</li>
+            </ul>
+          </div>
+          <div class="study-detail">
+            <strong>Why It Matters</strong>
+            <p>Demonstrated that a multi-analyte approach combining protein + DNA biomarkers could detect diverse cancers from a single blood draw with clinically relevant specificity. Established proof of concept for multi-cancer early detection (MCED) tests.</p>
+          </div>
+          <div class="study-detail">
+            <strong>Limitations</strong>
+            <p>Case-control design with equal cancer/control representation (not real-world prevalence). Patients had known, diagnosed cancers &mdash; not truly asymptomatic. Sensitivity was dramatically lower for Stage I than overall. Does not establish clinical benefit.</p>
+          </div>
+          <div class="study-citation full-width">
+            <strong>Citation</strong>
+            <p>Cohen JD, et al. &ldquo;Detection and localization of surgically resectable cancers with a multi-analyte blood test.&rdquo; <em>Science.</em> 2018;359(6378):926&ndash;930. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/29348365/" target="_blank" rel="noopener">29348365</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- STUDY 2 -->
+      <div class="study-card">
+        <div class="study-header">
+          <h4>Galleri MCED Test: Clinical Validation of Methylation-Based Multi-Cancer Detection</h4>
+          <span class="study-year">Klein et al., 2021</span>
+        </div>
+        <div class="study-content">
+          <div class="study-detail">
+            <strong>Research Question</strong>
+            <p>Can genome-wide cfDNA methylation patterns from a blood test accurately detect and localize cancer signal across 50+ cancer types in an independent validation cohort?</p>
+          </div>
+          <div class="study-detail">
+            <strong>Study Design</strong>
+            <p>Independent validation set within CCGA study; 6,689 participants (2,369 cancer, 4,320 non-cancer). Methylation sequencing of cfDNA; ML classifier trained on separate training set.</p>
+          </div>
+          <div class="study-detail">
+            <strong>Main Findings</strong>
+            <ul>
+              <li>Overall sensitivity: 51.5% at 99.5% specificity</li>
+              <li>Stage I sensitivity: 16.8%; Stage III: 77.4%; Stage IV: 90.1%</li>
+              <li>Tissue of origin correctly predicted in 88.7% of positives</li>
+              <li>12 cancer types had &gt;75% sensitivity (e.g., anorectal, head/neck, ovarian)</li>
+            </ul>
+          </div>
+          <div class="study-detail">
+            <strong>Why It Matters</strong>
+            <p>The most rigorously validated MCED test published. Demonstrated that methylation-based detection achieves high specificity across a truly diverse cancer cohort and can predict tissue of origin at high accuracy &mdash; critical for guiding follow-up imaging.</p>
+          </div>
+          <div class="study-detail">
+            <strong>Limitations</strong>
+            <p>Case-control enrichment inflates apparent PPV. Only 16.8% Stage I sensitivity means 5 of 6 early-stage cancers are missed. No evidence yet of mortality reduction in a screened population. NHS-Galleri RCT (N=140,000) is ongoing.</p>
+          </div>
+          <div class="study-citation full-width">
+            <strong>Citation</strong>
+            <p>Klein EA, et al. &ldquo;Clinical validation of a targeted methylation-based multi-cancer early detection test using an independent validation set.&rdquo; <em>Ann Oncol.</em> 2021;32(9):1167&ndash;1177. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/34044096/" target="_blank" rel="noopener">34044096</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- STUDY 3 -->
+      <div class="study-card">
+        <div class="study-header">
+          <h4>DETECT-A Trial: Feasibility of MCED Blood Testing Combined with PET-CT in Asymptomatic Women</h4>
+          <span class="study-year">Lennon et al., 2020</span>
+        </div>
+        <div class="study-content">
+          <div class="study-detail">
+            <strong>Research Question</strong>
+            <p>Is CancerSEEK multi-analyte blood testing feasible as a population screening tool in asymptomatic women, and what happens clinically after a positive result?</p>
+          </div>
+          <div class="study-detail">
+            <strong>Study Design</strong>
+            <p>Prospective, single-arm trial. 10,006 women without prior cancer history, ages 65&ndash;75. Blood test followed by PET-CT and specialist evaluation for positives.</p>
+          </div>
+          <div class="study-detail">
+            <strong>Main Findings</strong>
+            <ul>
+              <li>96 positive blood test results in 10,006 participants (1.0%)</li>
+              <li>PET-CT revealed potential cancers in 36/96 positives</li>
+              <li>26 cancers confirmed; of these, 19 were not found by standard screening</li>
+              <li>9 positives had no cancer found despite extensive workup (false positives)</li>
+              <li>PPV of confirmed PET-CT findings: ~72%</li>
+            </ul>
+          </div>
+          <div class="study-detail">
+            <strong>Why It Matters</strong>
+            <p>First prospective feasibility study of an MCED test in a true asymptomatic population. Demonstrated detection of cancers not identified by standard screening, but also quantified the false positive burden and illustrated the clinical complexity of follow-up workups.</p>
+          </div>
+          <div class="study-detail">
+            <strong>Limitations</strong>
+            <p>No control arm; cannot determine whether early detection improved outcomes. Only enrolled women. 9 of 96 positives led to extensive, unnecessary workup. No proof of mortality reduction.</p>
+          </div>
+          <div class="study-citation full-width">
+            <strong>Citation</strong>
+            <p>Lennon AM, et al. &ldquo;Feasibility of blood testing combined with PET-CT to screen for cancer and guide intervention.&rdquo; <em>Science.</em> 2020;369(6499):eabb9601. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/32630322/" target="_blank" rel="noopener">32630322</a></p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="content-container">
-        <section class="content-section">
-            <p class="intro-text">This page highlights influential studies in liquid biopsy research. Each study contributes evidence to the broader understanding of blood-based biomarkers, their clinical applications, and current limitations. Notes are intentionally left for additional details and citations.</p>
-        </section>
+    <!-- SECTION 2: Treatment Monitoring -->
+    <section class="content-section reveal">
+      <h3>Treatment Monitoring &amp; Residual Disease</h3>
 
-        <!-- Study Category: Colorectal Cancer -->
-        <section class="content-section">
-            <h3>Colorectal Cancer: ctDNA-Based Screening</h3>
-
-            <div class="study-card">
-                <div class="study-header">
-                    <h4>Study 1: [Study Title Here]</h4>
-                    <span class="study-year">[Year]</span>
-                </div>
-                <div class="study-content">
-                    <div class="study-detail">
-                        <strong>Research Question:</strong>
-                        <p>[Insert research question here. Example: Can ctDNA detection in stool samples improve colorectal cancer screening compared to standard FIT testing?]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Study Design:</strong>
-                        <p>[Insert study design. Example: Prospective cohort of 50,000 participants; comparison of ctDNA-based test vs. FIT in asymptomatic screening population]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Main Findings:</strong>
-                        <ul style="margin: 0.5rem 0 1rem 0;">
-                            <li>[Insert key finding 1]</li>
-                            <li>[Insert key finding 2]</li>
-                            <li>[Insert sensitivity/specificity data if available]</li>
-                        </ul>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Why It Matters:</strong>
-                        <p>[Insert explanation of significance. Example: Demonstrates potential for multi-cancer detection from single blood draw; suggests ctDNA-based screening could outperform traditional biomarkers in early colorectal cancer detection.]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Limitations:</strong>
-                        <p>[Insert study limitations. Example: Limited to predominantly European population; follow-up period may be insufficient to assess long-term screening impact; cost analysis not included.]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Citation:</strong>
-                        <p><a href="#" target="_blank">[PubMed Link]</a> | [Insert full citation here]</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="study-card">
-                <div class="study-header">
-                    <h4>Study 2: [Study Title Here]</h4>
-                    <span class="study-year">[Year]</span>
-                </div>
-                <div class="study-content">
-                    <div class="study-detail">
-                        <strong>Research Question:</strong>
-                        <p>[Insert research question here]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Study Design:</strong>
-                        <p>[Insert study design here]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Main Findings:</strong>
-                        <ul style="margin: 0.5rem 0 1rem 0;">
-                            <li>[Insert key finding]</li>
-                            <li>[Insert key finding]</li>
-                        </ul>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Why It Matters:</strong>
-                        <p>[Insert explanation of significance]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Limitations:</strong>
-                        <p>[Insert study limitations]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Citation:</strong>
-                        <p><a href="#" target="_blank">[PubMed Link]</a> | [Insert full citation here]</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Study Category: Breast Cancer -->
-        <section class="content-section">
-            <h3>Breast Cancer: ctDNA and CTC Monitoring</h3>
-
-            <div class="study-card">
-                <div class="study-header">
-                    <h4>Study 3: [Study Title Here]</h4>
-                    <span class="study-year">[Year]</span>
-                </div>
-                <div class="study-content">
-                    <div class="study-detail">
-                        <strong>Research Question:</strong>
-                        <p>[Insert research question. Example: Can circulating tumor DNA (ctDNA) detect minimal residual disease (MRD) after breast cancer treatment and predict recurrence risk?]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Study Design:</strong>
-                        <p>[Insert study design]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Main Findings:</strong>
-                        <ul style="margin: 0.5rem 0 1rem 0;">
-                            <li>[Insert finding on MRD detection]</li>
-                            <li>[Insert finding on recurrence prediction]</li>
-                            <li>[Insert prognostic data]</li>
-                        </ul>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Why It Matters:</strong>
-                        <p>[Example: Suggests ctDNA-based MRD detection could identify high-risk patients early, enabling intervention before clinically detectable recurrence; potential to spare low-risk patients from intensive follow-up.]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Limitations:</strong>
-                        <p>[Insert limitations]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Citation:</strong>
-                        <p><a href="#" target="_blank">[PubMed Link]</a> | [Insert full citation here]</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Study Category: Multi-Cancer Detection -->
-        <section class="content-section">
-            <h3>Multi-Cancer Early Detection (MCED)</h3>
-
-            <div class="study-card">
-                <div class="study-header">
-                    <h4>Study 4: Galleri Trial [Study Title]</h4>
-                    <span class="study-year">[Year]</span>
-                </div>
-                <div class="study-content">
-                    <div class="study-detail">
-                        <strong>Research Question:</strong>
-                        <p>[Insert research question. Example: Can a single ctDNA-based test detect multiple cancer types in asymptomatic screened population? What is the clinical utility for population screening?]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Study Design:</strong>
-                        <p>[Insert study design. Example: Prospective, multi-center screening trial; asymptomatic individuals receiving ctDNA-based multi-cancer test; imaging follow-up if test positive.]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Population & Scope:</strong>
-                        <p>[Insert details. Example: 50,000+ participants; diverse cancer types (breast, colorectal, lung, ovarian, etc.); age range 50–77 years.]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Main Findings:</strong>
-                        <ul style="margin: 0.5rem 0 1rem 0;">
-                            <li>[Insert sensitivity/specificity data]</li>
-                            <li>[Insert cancer detection rate]</li>
-                            <li>[Insert false positive rate]</li>
-                            <li>[Insert cancer stage distribution of detected cancers]</li>
-                        </ul>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Why It Matters:</strong>
-                        <p>[Example: Demonstrates potential for single-test multi-cancer screening; shows that ctDNA-based tests can detect cancers at various stages in asymptomatic populations; provides real-world evidence of clinical feasibility.]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Important Limitations & Caveats:</strong>
-                        <ul style="margin: 0.5rem 0 1rem 0;">
-                            <li>[Insert caveat: Retrospective analysis or prospective data still accumulating?]</li>
-                            <li>[Insert: Does not yet answer whether early detection improves outcomes?]</li>
-                            <li>[Insert: Long-term follow-up data may be limited]</li>
-                            <li>[Insert: Cost-effectiveness analysis pending]</li>
-                        </ul>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Citation & More Info:</strong>
-                        <p><a href="#" target="_blank">[PubMed Link]</a> | [Insert full citation here]</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="study-card">
-                <div class="study-header">
-                    <h4>Study 5: [Other MCED Trial]</h4>
-                    <span class="study-year">[Year]</span>
-                </div>
-                <div class="study-content">
-                    <div class="study-detail">
-                        <strong>Research Question:</strong>
-                        <p>[Insert research question here]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Key Finding:</strong>
-                        <p>[Insert key finding]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Citation:</strong>
-                        <p><a href="#" target="_blank">[PubMed Link]</a> | [Insert full citation here]</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Study Category: Technical/Methods -->
-        <section class="content-section">
-            <h3>Technical & Methods Development</h3>
-
-            <div class="study-card">
-                <div class="study-header">
-                    <h4>Study 6: [Detection Method Study]</h4>
-                    <span class="study-year">[Year]</span>
-                </div>
-                <div class="study-content">
-                    <div class="study-detail">
-                        <strong>Focus:</strong>
-                        <p>[Example: Development of ultra-sensitive ctDNA detection method; improvement in CTC isolation efficiency; novel exosome biomarker discovery]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Key Innovation:</strong>
-                        <p>[Insert technical innovation or improvement]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Significance for Field:</strong>
-                        <p>[Insert how this advances the field]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Citation:</strong>
-                        <p><a href="#" target="_blank">[PubMed Link]</a> | [Insert full citation here]</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Study Category: Clinical Validation -->
-        <section class="content-section">
-            <h3>Clinical Validation & Real-World Performance</h3>
-
-            <div class="study-card">
-                <div class="study-header">
-                    <h4>Study 7: [Clinical Validation Study]</h4>
-                    <span class="study-year">[Year]</span>
-                </div>
-                <div class="study-content">
-                    <div class="study-detail">
-                        <strong>Research Question:</strong>
-                        <p>[Example: How does liquid biopsy test performance vary across different patient populations and cancer types? What are real-world specificity and positive predictive value?]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Key Findings:</strong>
-                        <ul style="margin: 0.5rem 0 1rem 0;">
-                            <li>[Insert finding on performance variation]</li>
-                            <li>[Insert finding on predictive values]</li>
-                            <li>[Insert finding on sources of false positives or negatives]</li>
-                        </ul>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Clinical Implications:</strong>
-                        <p>[Insert how findings affect clinical decision-making]</p>
-                    </div>
-                    <div class="study-detail">
-                        <strong>Citation:</strong>
-                        <p><a href="#" target="_blank">[PubMed Link]</a> | [Insert full citation here]</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Instructions for Adding Studies -->
-        <section class="content-section info-box">
-            <h3>How to Add More Studies</h3>
-            <p>This page is designed as a growing research portfolio. To add studies:</p>
-            <ol style="margin-top: 0.5rem;">
-                <li>Find the study in <a href="sources.html">PubMed</a> or journal databases</li>
-                <li>Copy the study title and publication year</li>
-                <li>Identify the research question, design, findings, and limitations</li>
-                <li>Paste the PubMed or journal link into the citation field</li>
-                <li>Add 1–2 sentence interpretation of clinical significance</li>
-            </ol>
-            <p style="margin-top: 1rem;"><em>Pro tip: Focus on studies from peer-reviewed journals (Nature, Lancet, JAMA, Cancer Cell, Clinical Chemistry, etc.) and clinical trials listed on ClinicalTrials.gov. Studies with large sample sizes, rigorous designs, and relevant cancer types will be most valuable.</em></p>
-        </section>
-
-        <!-- Study Categories Summary -->
-        <section class="content-section">
-            <h3>Research Themes & Gaps</h3>
-            <div class="theme-grid">
-                <div class="theme-card">
-                    <h5>Well-Studied</h5>
-                    <ul>
-                        <li>ctDNA in metastatic disease</li>
-                        <li>CTC isolation techniques</li>
-                        <li>MRD detection frameworks</li>
-                    </ul>
-                </div>
-                <div class="theme-card">
-                    <h5>Emerging</h5>
-                    <ul>
-                        <li>Multi-cancer screening</li>
-                        <li>AI-based biomarker discovery</li>
-                        <li>CHIP differentiation</li>
-                    </ul>
-                </div>
-                <div class="theme-card">
-                    <h5>Research Gaps</h5>
-                    <ul>
-                        <li>True early-stage screening efficacy</li>
-                        <li>Cost-effectiveness analyses</li>
-                        <li>Long-term patient outcomes</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-navigation">
-            <a href="research-analysis.html" class="nav-link-secondary">← Back to Research Analysis</a>
-            <a href="sources.html" class="nav-link-secondary">Continue to Sources →</a>
+      <!-- STUDY 4 -->
+      <div class="study-card">
+        <div class="study-header">
+          <h4>DYNAMIC Trial: ctDNA-Guided Adjuvant Chemotherapy in Stage II Colon Cancer</h4>
+          <span class="study-year">Tie et al., 2022</span>
         </div>
-    </main>
+        <div class="study-content">
+          <div class="study-detail">
+            <strong>Research Question</strong>
+            <p>Can post-surgical ctDNA status guide adjuvant chemotherapy decisions in Stage II colon cancer, reducing overtreatment without compromising survival outcomes?</p>
+          </div>
+          <div class="study-detail">
+            <strong>Study Design</strong>
+            <p>Randomized controlled trial; 455 patients with Stage II colon cancer post-resection. ctDNA-guided arm: ctDNA+ received chemo, ctDNA&minus; observed. Standard arm: treatment by conventional risk criteria.</p>
+          </div>
+          <div class="study-detail">
+            <strong>Main Findings</strong>
+            <ul>
+              <li>15% fewer patients received chemotherapy in ctDNA-guided arm</li>
+              <li>2-year recurrence-free survival: equivalent between arms (93.5% vs 92.4%)</li>
+              <li>ctDNA+ post-op patients who received chemo had improved outcomes vs. untreated ctDNA+ patients</li>
+              <li>ctDNA&minus; patients with high-risk features had excellent survival without chemo</li>
+            </ul>
+          </div>
+          <div class="study-detail">
+            <strong>Why It Matters</strong>
+            <p>The strongest evidence to date that ctDNA-guided treatment decisions in post-surgical cancer management are <em>clinically safe</em> and can reduce unnecessary treatment. This is a landmark in ctDNA&rsquo;s transition from research tool to clinical practice.</p>
+          </div>
+          <div class="study-detail">
+            <strong>Limitations</strong>
+            <p>Limited to Stage II colon cancer; applicability to other cancer types requires separate validation. Two-year follow-up may not capture all late recurrences. Not powered as a superiority trial.</p>
+          </div>
+          <div class="study-citation full-width">
+            <strong>Citation</strong>
+            <p>Tie J, et al. &ldquo;Circulating Tumor DNA Analysis Guiding Adjuvant Therapy in Stage II Colon Cancer.&rdquo; <em>N Engl J Med.</em> 2022;386(24):2261&ndash;2272. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/35657951/" target="_blank" rel="noopener">35657951</a></p>
+          </div>
+        </div>
+      </div>
 
-    <!-- Footer -->
+      <!-- STUDY 5 -->
+      <div class="study-card">
+        <div class="study-header">
+          <h4>ctDNA Monitoring in Metastatic Breast Cancer: Comparison to CTCs and CA 15-3</h4>
+          <span class="study-year">Dawson et al., 2013</span>
+        </div>
+        <div class="study-content">
+          <div class="study-detail">
+            <strong>Research Question</strong>
+            <p>Does ctDNA level correlate with disease burden and treatment response better than circulating tumor cells (CTCs) or the standard serum protein marker CA 15-3?</p>
+          </div>
+          <div class="study-detail">
+            <strong>Study Design</strong>
+            <p>Prospective cohort; 30 patients with metastatic breast cancer undergoing treatment. Serial blood samples analyzed for ctDNA, CTC count, and CA 15-3. Correlated with imaging and clinical outcomes.</p>
+          </div>
+          <div class="study-detail">
+            <strong>Main Findings</strong>
+            <ul>
+              <li>ctDNA detectable in 97% of patients; CTCs detected in 87%; CA 15-3 elevated in 78%</li>
+              <li>ctDNA levels correlated most strongly with tumor volume on imaging (r=0.89)</li>
+              <li>ctDNA predicted treatment response and clinical progression earlier than CA 15-3 in most patients</li>
+              <li>In one patient, ctDNA rise preceded CT-confirmed progression by 5 months</li>
+            </ul>
+          </div>
+          <div class="study-detail">
+            <strong>Why It Matters</strong>
+            <p>Seminal early study establishing ctDNA as a superior monitoring biomarker over CTCs and protein markers in metastatic breast cancer. Influenced subsequent clinical adoption of ctDNA monitoring and set the standard for serial sampling study design.</p>
+          </div>
+          <div class="study-detail">
+            <strong>Limitations</strong>
+            <p>Small sample (n=30); single-institution study; focused on metastatic disease where ctDNA levels are high. Does not apply to early-stage detection. All patients already had confirmed breast cancer.</p>
+          </div>
+          <div class="study-citation full-width">
+            <strong>Citation</strong>
+            <p>Dawson SJ, et al. &ldquo;Analysis of circulating tumor DNA to monitor metastatic breast cancer.&rdquo; <em>N Engl J Med.</em> 2013;368(13):1199&ndash;1209. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/23484797/" target="_blank" rel="noopener">23484797</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- STUDY 6 -->
+      <div class="study-card">
+        <div class="study-header">
+          <h4>NHS-Galleri Pilot: MCED Test in Asymptomatic NHS Screening Population</h4>
+          <span class="study-year">Neal et al., 2023</span>
+        </div>
+        <div class="study-content">
+          <div class="study-detail">
+            <strong>Research Question</strong>
+            <p>What is the real-world performance, positive predictive value, and follow-up burden of the Galleri MCED test in an unselected asymptomatic NHS screening population?</p>
+          </div>
+          <div class="study-detail">
+            <strong>Study Design</strong>
+            <p>Prospective, single-arm pilot; 6,972 participants from 7 NHS Trusts. Participants aged 50&ndash;77 with no current cancer diagnosis. Galleri test followed by standard diagnostic workup for positives.</p>
+          </div>
+          <div class="study-detail">
+            <strong>Main Findings</strong>
+            <ul>
+              <li>0.5% test-positive rate (35/6,935 valid results)</li>
+              <li>11 cancers confirmed in 35 positives: PPV = 43.1%</li>
+              <li>Tissue of origin correctly predicted in 75% of confirmed cancers</li>
+              <li>Of 11 confirmed cancers, 5 were Stage I or II at diagnosis</li>
+            </ul>
+          </div>
+          <div class="study-detail">
+            <strong>Why It Matters</strong>
+            <p>First published real-world NHS screening pilot with an MCED test. Demonstrates lower PPV in genuine asymptomatic populations (43%) compared to case-control studies (~88%). Provides the most realistic data set for evaluating what population screening would actually look like clinically.</p>
+          </div>
+          <div class="study-detail">
+            <strong>Limitations</strong>
+            <p>Pilot study; single arm; no control group. Follow-up period too short to observe mortality outcome. PPV of 43% means majority of positives are false alarms. The full NHS-Galleri RCT (140,000 participants) will provide definitive evidence.</p>
+          </div>
+          <div class="study-citation full-width">
+            <strong>Citation</strong>
+            <p>Neal RD, et al. &ldquo;Cell-free DNA-based multi-cancer early detection test in an asymptomatic screening population (NHS-Galleri): a prospective, single-arm, intervention pilot study.&rdquo; <em>Lancet.</em> 2023;401(10373):264&ndash;274. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/36634698/" target="_blank" rel="noopener">36634698</a></p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h5>Liquid Biopsy Research</h5>
-                <p>An educational research portfolio exploring blood-based biomarkers in early cancer detection.</p>
-            </div>
-            <div class="footer-section">
-                <h5>Navigation</h5>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="overview.html">Overview</a></li>
-                    <li><a href="research-analysis.html">Research Analysis</a></li>
-                    <li><a href="key-studies.html">Key Studies</a></li>
-                    <li><a href="sources.html">Sources</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h5>Legal</h5>
-                <p><strong>Disclaimer:</strong> This website is an educational resource and research portfolio. It is not intended to provide medical advice, diagnosis, or treatment. All content is for informational purposes only. Consult with qualified healthcare professionals for medical decisions.</p>
-            </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Liquid Biopsy Research</h3>
+          <p>An independent educational portfolio examining blood-based biomarkers and their potential role in early cancer detection. Synthesizing peer-reviewed literature with critical analysis.</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Liquid Biopsy Research Portfolio. All rights reserved. Content synthesized from peer-reviewed literature.</p>
+        <div class="footer-col">
+          <h5>Pages</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="research-analysis.html">Research Analysis</a></li>
+            <li><a href="key-studies.html">Key Studies</a></li>
+            <li><a href="sources.html">Sources</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
         </div>
+        <div class="footer-col">
+          <h5>Key Topics</h5>
+          <ul class="footer-links">
+            <li><a href="overview.html#ctdna">Circulating Tumor DNA</a></li>
+            <li><a href="overview.html#ctcs">Circulating Tumor Cells</a></li>
+            <li><a href="research-analysis.html#sensitivity">Sensitivity &amp; Specificity</a></li>
+            <li><a href="research-analysis.html#limitations">Current Limitations</a></li>
+            <li><a href="key-studies.html">CancerSEEK &amp; Galleri</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Sources</h5>
+          <ul class="footer-links">
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noopener">PubMed</a></li>
+            <li><a href="https://www.cancer.gov" target="_blank" rel="noopener">NCI</a></li>
+            <li><a href="https://www.nih.gov" target="_blank" rel="noopener">NIH</a></li>
+            <li><a href="https://clinicaltrials.gov" target="_blank" rel="noopener">ClinicalTrials.gov</a></li>
+            <li><a href="sources.html">Full Bibliography</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Liquid Biopsy Research Portfolio</p>
+        <p>Educational use only &mdash; not medical advice</p>
+      </div>
+      <p class="footer-disclaimer">This website is an independent academic research portfolio created for educational purposes. It does not constitute medical advice, diagnosis, or treatment recommendations. All claims are sourced from peer-reviewed literature; see the Sources page for full citations. Consult a qualified healthcare provider for any medical questions.</p>
     </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

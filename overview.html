@@ -1,229 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive overview of liquid biopsy technology, biomarkers, and its advantages over traditional tissue biopsy for early cancer detection.">
-    <meta name="keywords" content="liquid biopsy overview, ctDNA, circulating tumor cells, cancer biomarkers, tissue biopsy comparison">
-    <title>Overview - Liquid Biopsy Research</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comprehensive overview of liquid biopsy technology, biomarkers, and how it compares to tissue biopsy for early cancer detection.">
+  <title>Overview &mdash; Liquid Biopsy Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <h1>Liquid Biopsy Research</h1>
-                <p class="nav-tagline">Early Cancer Detection</p>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="overview.html" class="nav-link active">Overview</a></li>
-                <li><a href="research-analysis.html" class="nav-link">Research Analysis</a></li>
-                <li><a href="key-studies.html" class="nav-link">Key Studies</a></li>
-                <li><a href="sources.html" class="nav-link">Sources</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-            </ul>
-        </div>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-brand">
+          <span class="site-title">Liquid Biopsy Research</span>
+          <span class="nav-tagline">Early Cancer Detection</span>
+        </a>
+        <ul class="nav-menu" id="navMenu"><li><a href="index.html" class="nav-link">Home</a></li>
+<li><a href="overview.html" class="nav-link active">Overview</a></li>
+<li><a href="research-analysis.html" class="nav-link">Research Analysis</a></li>
+<li><a href="key-studies.html" class="nav-link">Key Studies</a></li>
+<li><a href="sources.html" class="nav-link">Sources</a></li>
+<li><a href="about.html" class="nav-link">About</a></li></ul>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <h2>Overview: Liquid Biopsy Technology</h2>
-        <p class="page-subtitle">Understanding blood-based biomarkers and their role in cancer detection</p>
+  <section class="page-header">
+    <div class="page-header-inner">
+      <span class="section-eyebrow">Foundation</span>
+      <h2>Liquid Biopsy: Technology Overview</h2>
+      <p class="page-subtitle">Understanding blood-based biomarkers and their role in cancer detection from the cellular level up.</p>
+    </div>
+  </section>
+
+  <main class="content-container">
+
+    <section class="content-section reveal">
+      <h3 id="what">What Is a Liquid Biopsy?</h3>
+      <p>A liquid biopsy is a non-invasive diagnostic test that detects cancer-related genetic and molecular markers circulating in biological fluids&nbsp;&mdash; primarily blood. Unlike traditional tissue biopsy, which requires an invasive procedure to extract tumor material, liquid biopsy analyzes tumor-derived substances naturally present in the bloodstream.</p>
+      <p>When cancer cells die or are shed from a tumor, they release cellular material into the circulation. Detecting and analyzing these circulating biomarkers could potentially identify cancer at earlier stages, monitor treatment response, or detect recurrence before clinical symptoms develop.</p>
+      <div class="highlight-box">
+        <h5>Key Concept</h5>
+        <p><strong>&ldquo;Liquid biopsy offers the potential for non-invasive, sequential sampling of tumors through blood collection&nbsp;&mdash; enabling longitudinal molecular surveillance in ways tissue biopsy cannot achieve.&rdquo;</strong></p>
+      </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="content-container">
-        <section class="content-section">
-            <h3>What is a Liquid Biopsy?</h3>
-            <p>A liquid biopsy is a non-invasive diagnostic test that detects cancer-related genetic and molecular markers circulating in biological fluids—primarily blood. Unlike traditional tissue biopsy, which requires an invasive procedure to extract tumor material, liquid biopsy analyzes tumor-derived substances naturally present in the bloodstream.</p>
-            
-            <p>The fundamental premise is straightforward: when cancer cells die or are shed from a tumor, they release cellular material into the circulation. By detecting and analyzing these circulating biomarkers, clinicians may identify cancer at earlier stages, monitor treatment response, or detect recurrence before clinical symptoms develop.</p>
-
-            <div class="highlight-box">
-                <h5>Key Concept</h5>
-                <p><strong>"Liquid biopsy offers the potential for non-invasive, sequential sampling of tumors through blood collection—enabling longitudinal molecular surveillance in ways tissue biopsy cannot."</strong></p>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <h3>Biomarkers in Liquid Biopsy</h3>
-            <p>Liquid biopsy relies on detecting several types of circulating biomarkers. Each has distinct biological properties and clinical potential:</p>
-
-            <div class="biomarker-grid">
-                <div class="biomarker-card">
-                    <h4>Circulating Tumor DNA (ctDNA)</h4>
-                    <p><strong>What it is:</strong> Small DNA fragments shed from tumor cells into the bloodstream. These fragments may carry cancer-specific mutations, deletions, or chromosomal rearrangements.</p>
-                    <p><strong>Detection methods:</strong> Digital PCR, next-generation sequencing (NGS), ddPCR, targeted amplicon sequencing.</p>
-                    <p><strong>Advantages:</strong> Specific, directly reflects tumor genetics.</p>
-                    <p><strong>Challenges:</strong> Low abundance in early disease, requires sensitive detection technology.</p>
-                </div>
-
-                <div class="biomarker-card">
-                    <h4>Circulating Tumor Cells (CTCs)</h4>
-                    <p><strong>What it is:</strong> Intact cancer cells that have entered the bloodstream and are circulating throughout the body.</p>
-                    <p><strong>Detection methods:</strong> Immunomagnetic capture, filtration, microfluidic devices, immunofluorescence.</p>
-                    <p><strong>Advantages:</strong> Can perform cellular analysis, morphology assessment, and clonal evolution studies.</p>
-                    <p><strong>Challenges:</strong> Extremely rare in blood (1 CTC per 10^6 to 10^9 normal cells), difficult to capture and isolate.</p>
-                </div>
-
-                <div class="biomarker-card">
-                    <h4>Extracellular Vesicles (EVs) & Exosomes</h4>
-                    <p><strong>What it is:</strong> Small membrane-bound particles released by cells, carrying proteins, lipids, and nucleic acids. Exosomes are a subset with sizes of 30–150 nm.</p>
-                    <p><strong>Detection methods:</strong> Electron microscopy, nanoparticle tracking, immunoassays, RNA sequencing.</p>
-                    <p><strong>Advantages:</strong> Relatively abundant, protected from degradation, carry multiple cargo types.</p>
-                    <p><strong>Challenges:</strong> Difficult to isolate tumor-specific EVs from background EV population; heterogeneous marker expression.</p>
-                </div>
-            </div>
-
-            <p style="margin-top: 2rem;"><strong>Emerging biomarkers include:</strong> circulating tumor RNA (ctRNA), circulating free DNA methylation patterns, circulating protein biomarkers (PSA, CEA, etc.), and metabolomic signatures.</p>
-        </section>
-
-        <section class="content-section">
-            <h3>Why is Early Cancer Detection Important?</h3>
-            <p>Early cancer detection is critically important for several evidence-based reasons:</p>
-
-            <ul class="content-list">
-                <li><strong>Survival outcomes:</strong> Cancer survival rates are dramatically better when diagnosis occurs at localized stages versus metastatic stages. For example, 5-year survival for colorectal cancer is ~90% at stage I but ~14% at stage IV.</li>
-                <li><strong>Treatment options:</strong> Early-stage cancers often have more treatment modalities available and may avoid chemotherapy in favor of surgery or targeted approaches.</li>
-                <li><strong>Quality of life:</strong> Treating cancer before it becomes symptomatic often results in less aggressive treatment and better functional outcomes.</li>
-                <li><strong>Prevention of metastasis:</strong> Detecting cancer before it spreads to distant sites reduces the likelihood of incurable disease.</li>
-                <li><strong>Individual impact:</strong> Earlier detection can mean years added to survival and improved quality of life during survivorship.</li>
-            </ul>
-
-            <p>However, screening healthy populations carries its own risks (false positives, overdiagnosis of indolent cancers, psychological harm, and unnecessary follow-up procedures). Effective cancer screening requires balancing sensitivity, specificity, predictive value, and clinical utility—areas where liquid biopsy faces significant scientific challenges.</p>
-        </section>
-
-        <section class="content-section">
-            <h3>Liquid Biopsy vs. Tissue Biopsy: Key Differences</h3>
-            
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Tissue Biopsy</th>
-                        <th>Liquid Biopsy</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Invasiveness</strong></td>
-                        <td>Invasive; requires needle or surgical intervention</td>
-                        <td>Non-invasive; simple blood draw</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Sampling</strong></td>
-                        <td>Single, localized tissue sample</td>
-                        <td>Systemic; represents entire tumor and circulating material</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Frequency</strong></td>
-                        <td>Limited (invasive procedure); single or few samples</td>
-                        <td>Can be repeated frequently; enables longitudinal monitoring</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Tumor heterogeneity</strong></td>
-                        <td>Captures localized tumor properties at one site</td>
-                        <td>May represent clonal diversity and metastatic burden</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Cell morphology</strong></td>
-                        <td>Preserved; allows histopathology and pathologist review</td>
-                        <td>Limited; DNA/protein-based, molecular focus</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Risk profile</strong></td>
-                        <td>Risk of infection, bleeding, organ damage</td>
-                        <td>Minimal risk; standard blood draw risks</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Clinical role</strong></td>
-                        <td>Gold standard for diagnosis and tumor characterization</td>
-                        <td>Emerging; most useful for monitoring, prognosis, minimal residual disease</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section class="content-section">
-            <h3>Cancer Types Most Studied in Liquid Biopsy</h3>
-            <p>Certain cancer types have been more extensively studied in liquid biopsy research due to higher biomarker abundance, clinical prevalence, or frequency in screening populations:</p>
-
-            <div class="cancer-types-list">
-                <div class="cancer-type-item">
-                    <h5>Colorectal Cancer</h5>
-                    <p>High ctDNA-positive rate in advanced disease. Several clinical trials investigating ctDNA for screening and monitoring. Challenge: Low abundance in early adenomatous polyps.</p>
-                </div>
-                <div class="cancer-type-item">
-                    <h5>Breast Cancer</h5>
-                    <p>Well-characterized ctDNA and CTC detection. Active research in early detection and treatment response monitoring. HER2-positive and hormone receptor status can be assessed.</p>
-                </div>
-                <div class="cancer-type-item">
-                    <h5>Lung Cancer</h5>
-                    <p>Strong biomarker presence in advanced disease. Research focused on detecting driver mutations (EGFR, ALK, ROS1) and immunotherapy response. Early-stage detection remains challenging.</p>
-                </div>
-                <div class="cancer-type-item">
-                    <h5>Ovarian Cancer</h5>
-                    <p>Limited current screening tools; liquid biopsy research is active. ctDNA and protein biomarkers (CA-125) combined approaches under investigation.</p>
-                </div>
-                <div class="cancer-type-item">
-                    <h5>Melanoma</h5>
-                    <p>ctDNA and CTC detection well-established in advanced melanoma. Emerging applications in early detection and treatment monitoring.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section special-box">
-            <h3>Summary: What Makes This Topic Promising?</h3>
-            <p><strong>Liquid biopsy represents a genuine innovation in cancer diagnostics</strong> for several scientifically grounded reasons:</p>
-
-            <ul class="content-list">
-                <li><strong>Non-invasive nature:</strong> Eliminates procedural risks and enables repetitive sampling for longitudinal surveillance.</li>
-                <li><strong>Molecular precision:</strong> Directly analyzes tumor genetics and can guide precision medicine and targeted therapies.</li>
-                <li><strong>Real-time monitoring:</strong> Can detect therapy resistance, recurrence, and minimal residual disease in ways tissue biopsy cannot.</li>
-                <li><strong>Emerging technology trajectory:</strong> Detection sensitivity improves rapidly; technologies like next-generation sequencing become more affordable and sensitive annually.</li>
-                <li><strong>Multi-cancer platforms:</strong> Some ctDNA assays can detect multiple cancer types from a single blood draw—potentially enabling broad population screening.</li>
-            </ul>
-
-            <h5 style="margin-top: 1.5rem;">But why hasn't it revolutionized cancer care yet?</h5>
-            <p>Despite decades of research and billions in investment, liquid biopsy remains an emerging rather than standard diagnostic tool. The core limitation: <strong>detecting rare cancer biomarkers in disease-free individuals requires sensitivity and specificity that current technologies have not yet achieved at clinically acceptable thresholds</strong>. The research analysis section explores these challenges in depth.</p>
-        </section>
-
-        <div class="section-navigation">
-            <a href="index.html" class="nav-link-secondary">← Back to Home</a>
-            <a href="research-analysis.html" class="nav-link-secondary">Continue to Research Analysis →</a>
+    <section class="content-section reveal" id="ctdna">
+      <h3>Biomarkers in Detail</h3>
+      <p>Liquid biopsy relies on detecting several categories of circulating biomarkers. Each has distinct biological properties, detection challenges, and clinical potential:</p>
+      <div class="biomarker-grid">
+        <div class="biomarker-card">
+          <h4>Circulating Tumor DNA (ctDNA)</h4>
+          <p><strong>What it is:</strong> Short DNA fragments shed from apoptotic or necrotic tumor cells carrying cancer-specific mutations, methylation patterns, or chromosomal rearrangements.</p>
+          <p><strong>Detection:</strong> Digital PCR (ddPCR), next-generation sequencing (NGS), targeted amplicon sequencing, whole-genome methylation profiling.</p>
+          <p><strong>Advantage:</strong> Reflects tumor genetics directly; can detect mutations and copy-number changes.</p>
+          <p><strong>Challenge:</strong> Concentrations as low as 0.01% of total cfDNA in early-stage disease. Requires ultra-sensitive assays.</p>
         </div>
-    </main>
+        <div class="biomarker-card">
+          <h4>Circulating Tumor Cells (CTCs)</h4>
+          <p><strong>What it is:</strong> Intact cancer cells detached from the primary tumor or metastatic site and circulating in the bloodstream.</p>
+          <p><strong>Detection:</strong> Immunomagnetic capture (CellSearch FDA-approved), filtration-based methods, microfluidic devices, immunofluorescence imaging.</p>
+          <p><strong>Advantage:</strong> Enables cellular-level analysis; morphology, protein expression, and clonal profiling are all possible.</p>
+          <p><strong>Challenge:</strong> 1 CTC per 10<sup>6</sup>&ndash;10<sup>9</sup> normal blood cells. Capture efficiency is low (&lt;50% for many devices).</p>
+        </div>
+        <div class="biomarker-card">
+          <h4>Extracellular Vesicles &amp; Exosomes</h4>
+          <p><strong>What it is:</strong> Membrane-bound nanoparticles (30&ndash;1000 nm) secreted by cells, carrying mRNA, miRNA, proteins, and DNA cargo from their cell of origin.</p>
+          <p><strong>Detection:</strong> Nanoparticle tracking, electron microscopy, immunoassays, RNA sequencing, flow cytometry.</p>
+          <p><strong>Advantage:</strong> Relatively abundant; protected cargo; can carry multi-analyte information.</p>
+          <p><strong>Challenge:</strong> Difficult to isolate tumor-specific EVs from the enormous background population from normal cells.</p>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <h5>Emerging Biomarkers</h5>
+        <p>Research is expanding into <strong>cell-free DNA methylation patterns</strong> (the Galleri test approach), <strong>circulating tumor RNA</strong>, <strong>protein biomarker panels</strong> (PSA, CEA, CA-125 combinations), and <strong>metabolomic signatures</strong>. Each adds complexity but may improve cancer-type specificity.</p>
+      </div>
+    </section>
 
-    <!-- Footer -->
+    <section class="content-section reveal">
+      <h3>Why Early Detection Matters</h3>
+      <p>The clinical rationale for early detection is unambiguous in aggregate evidence:</p>
+      <ul class="content-list">
+        <li><strong>Survival improvement:</strong> 5-year colorectal cancer survival is ~90% at Stage I but ~14% at Stage IV. Similar gradients exist for breast, lung, and ovarian cancers.</li>
+        <li><strong>Treatment options:</strong> Early-stage disease often avoids systemic chemotherapy in favor of surgery or targeted therapy with less toxicity.</li>
+        <li><strong>Metastasis prevention:</strong> Detecting cancer before lymphatic or hematogenous spread fundamentally changes treatability.</li>
+        <li><strong>Quality of life:</strong> Less aggressive treatment preserves function, reduces side effects, and improves survivorship.</li>
+      </ul>
+      <p>However, screening healthy populations carries real risks: false positives trigger anxiety, expensive imaging, and unnecessary biopsies. Overdiagnosis of indolent cancers that would never harm the patient is documented in prostate and thyroid screening. <strong>Any screening technology must balance sensitivity against specificity with rare disease prevalence in mind.</strong></p>
+    </section>
+
+    <section class="content-section reveal">
+      <h3>Liquid Biopsy vs. Tissue Biopsy</h3>
+      <div class="sensitivity-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Tissue Biopsy</th>
+              <th>Liquid Biopsy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Invasiveness</td><td>Invasive; needle or surgical procedure</td><td>Non-invasive; standard blood draw</td></tr>
+            <tr><td>Sampling breadth</td><td>Single localized site</td><td>Systemic; represents all circulating material</td></tr>
+            <tr><td>Repeatability</td><td>Limited; each sample is an invasive act</td><td>Can be repeated frequently for monitoring</td></tr>
+            <tr><td>Tumor heterogeneity</td><td>Captures one tumor region only</td><td>May reflect clonal diversity across sites</td></tr>
+            <tr><td>Histopathology</td><td>Full morphology available</td><td>Molecular only; no cell morphology from ctDNA</td></tr>
+            <tr><td>Risk profile</td><td>Infection, bleeding, organ injury risk</td><td>Standard venipuncture risks only</td></tr>
+            <tr><td>Clinical status</td><td>Gold standard for diagnosis</td><td>Approved for monitoring; screening remains investigational</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-section reveal" id="ctcs">
+      <h3>Cancer Types Most Studied</h3>
+      <p>Research interest is not uniform across cancer types. Detection feasibility depends on how well each cancer sheds biomarkers into circulation:</p>
+      <ul class="content-list">
+        <li><strong>Colorectal cancer:</strong> High ctDNA shedding makes it one of the best studied. FDA-approved Cologuard uses stool ctDNA.</li>
+        <li><strong>Breast cancer:</strong> ctDNA research is extensive for monitoring metastatic disease; early-stage screening sensitivity remains low (&lt;40% for Stage I).</li>
+        <li><strong>Lung cancer:</strong> EGFR and KRAS mutations detectable in circulating DNA; Cobas EGFR test FDA-approved for therapy selection.</li>
+        <li><strong>Ovarian cancer:</strong> CA-125 protein + ctDNA combinations show promise; highest sensitivity of any cancer in CancerSEEK (~98%).</li>
+        <li><strong>Pancreatic cancer:</strong> Extremely low ctDNA shedding at early stages makes early detection challenging despite high clinical need.</li>
+      </ul>
+    </section>
+
+  </main>
+
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h5>Liquid Biopsy Research</h5>
-                <p>An educational research portfolio exploring blood-based biomarkers in early cancer detection.</p>
-            </div>
-            <div class="footer-section">
-                <h5>Navigation</h5>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="overview.html">Overview</a></li>
-                    <li><a href="research-analysis.html">Research Analysis</a></li>
-                    <li><a href="key-studies.html">Key Studies</a></li>
-                    <li><a href="sources.html">Sources</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h5>Legal</h5>
-                <p><strong>Disclaimer:</strong> This website is an educational resource and research portfolio. It is not intended to provide medical advice, diagnosis, or treatment. All content is for informational purposes only. Consult with qualified healthcare professionals for medical decisions.</p>
-            </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Liquid Biopsy Research</h3>
+          <p>An independent educational portfolio examining blood-based biomarkers and their potential role in early cancer detection. Synthesizing peer-reviewed literature with critical analysis.</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Liquid Biopsy Research Portfolio. All rights reserved. Content synthesized from peer-reviewed literature.</p>
+        <div class="footer-col">
+          <h5>Pages</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="research-analysis.html">Research Analysis</a></li>
+            <li><a href="key-studies.html">Key Studies</a></li>
+            <li><a href="sources.html">Sources</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
         </div>
+        <div class="footer-col">
+          <h5>Key Topics</h5>
+          <ul class="footer-links">
+            <li><a href="overview.html#ctdna">Circulating Tumor DNA</a></li>
+            <li><a href="overview.html#ctcs">Circulating Tumor Cells</a></li>
+            <li><a href="research-analysis.html#sensitivity">Sensitivity &amp; Specificity</a></li>
+            <li><a href="research-analysis.html#limitations">Current Limitations</a></li>
+            <li><a href="key-studies.html">CancerSEEK &amp; Galleri</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Sources</h5>
+          <ul class="footer-links">
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noopener">PubMed</a></li>
+            <li><a href="https://www.cancer.gov" target="_blank" rel="noopener">NCI</a></li>
+            <li><a href="https://www.nih.gov" target="_blank" rel="noopener">NIH</a></li>
+            <li><a href="https://clinicaltrials.gov" target="_blank" rel="noopener">ClinicalTrials.gov</a></li>
+            <li><a href="sources.html">Full Bibliography</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Liquid Biopsy Research Portfolio</p>
+        <p>Educational use only &mdash; not medical advice</p>
+      </div>
+      <p class="footer-disclaimer">This website is an independent academic research portfolio created for educational purposes. It does not constitute medical advice, diagnosis, or treatment recommendations. All claims are sourced from peer-reviewed literature; see the Sources page for full citations. Consult a qualified healthcare provider for any medical questions.</p>
     </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

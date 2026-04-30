@@ -1,321 +1,194 @@
-// ==========================================
-// LIQUID BIOPSY RESEARCH - JAVASCRIPT
-// Enhanced interactivity and functionality
-// ==========================================
+// ============================================================
+//  LIQUID BIOPSY RESEARCH — JavaScript
+//  Scroll animations | Counter | Particles | Navbar | Charts
+// ============================================================
 
-document.addEventListener('DOMContentLoaded', function() {
-    initializeNavigation();
-    initializeSmoothScrolling();
-    initializeLazyLoadImages();
-    initializeScrollAnimations();
-    initializeTableOfContents();
+document.addEventListener('DOMContentLoaded', () => {
+  initNavbar();
+  initHamburger();
+  initScrollReveal();
+  initCounters();
+  initParticles();
+  initBarCharts();
+  initNavActiveState();
 });
 
-// ==========================================
-// NAVIGATION HIGHLIGHTING
-// ==========================================
-function initializeNavigation() {
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === currentPath) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
+// ── NAVBAR SCROLL EFFECT ─────────────────────────────────────
+function initNavbar() {
+  const navbar = document.getElementById('navbar');
+  if (!navbar) return;
+  const onScroll = () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 }
 
-// ==========================================
-// SMOOTH SCROLLING
-// ==========================================
-function initializeSmoothScrolling() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href === '#') return;
-            
-            e.preventDefault();
-            const element = document.querySelector(href);
-            if (element) {
-                element.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-}
-
-// ==========================================
-// LAZY LOADING FOR IMAGES
-// ==========================================
-function initializeLazyLoadImages() {
-    if ('IntersectionObserver' in window) {
-        const lazyImages = document.querySelectorAll('img[data-src]');
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    observer.unobserve(img);
-                }
-            });
-        });
-        
-        lazyImages.forEach(img => imageObserver.observe(img));
+// ── HAMBURGER MENU ───────────────────────────────────────────
+function initHamburger() {
+  const btn  = document.getElementById('hamburger');
+  const menu = document.getElementById('navMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    // animate spans
+    const spans = btn.querySelectorAll('span');
+    if (open) {
+      spans[0].style.transform = 'translateY(7px) rotate(45deg)';
+      spans[1].style.opacity   = '0';
+      spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+    } else {
+      spans[0].style.transform = '';
+      spans[1].style.opacity   = '';
+      spans[2].style.transform = '';
     }
-}
-
-// ==========================================
-// SCROLL ANIMATIONS
-// ==========================================
-function initializeScrollAnimations() {
-    const cards = document.querySelectorAll('.feature-card, .study-card, .biomarker-card');
-    
-    if ('IntersectionObserver' in window) {
-        const cardObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    cardObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-        
-        cards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-            cardObserver.observe(card);
-        });
-    }
-}
-
-// ==========================================
-// TABLE OF CONTENTS GENERATION
-// ==========================================
-function initializeTableOfContents() {
-    // Future enhancement: auto-generate ToC from h2/h3 headers
-    // This is a placeholder for potential future functionality
-}
-
-// ==========================================
-// FORM SUBMISSION (if feedback form is added)
-// ==========================================
-function handleFormSubmission(e) {
-    e.preventDefault();
-    
-    const form = e.target;
-    const formData = new FormData(form);
-    
-    // Show confirmation
-    alert('Thank you for your feedback! We appreciate your input.');
-    form.reset();
-}
-
-// ==========================================
-// ACCESSIBILITY ENHANCEMENTS
-// ==========================================
-document.addEventListener('keydown', function(e) {
-    // Skip to main content (Alt + M)
-    if (e.altKey && e.key === 'm') {
-        const mainContent = document.querySelector('.content-container');
-        if (mainContent) {
-            mainContent.focus();
-            mainContent.scrollIntoView();
-        }
-    }
-    
-    // Skip to navigation (Alt + N)
-    if (e.altKey && e.key === 'n') {
-        const navbar = document.querySelector('.navbar');
-        if (navbar) {
-            navbar.focus();
-            navbar.scrollIntoView();
-        }
-    }
-});
-
-// ==========================================
-// PRINT OPTIMIZATION
-// ==========================================
-function printPage() {
-    window.print();
-}
-
-// ==========================================
-// THEME TOGGLE (Optional dark mode - not implemented by default)
-// ==========================================
-function initializeThemeToggle() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-}
-
-// ==========================================
-// SCROLL TO TOP BUTTON
-// ==========================================
-function initializeScrollToTop() {
-    const scrollTopBtn = document.createElement('button');
-    scrollTopBtn.id = 'scrollTopBtn';
-    scrollTopBtn.innerHTML = '↑';
-    scrollTopBtn.className = 'scroll-to-top';
-    scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
-    
-    // Add styles
-    scrollTopBtn.style.cssText = `
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        width: 50px;
-        height: 50px;
-        background-color: #0066cc;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        z-index: 999;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    `;
-    
-    document.body.appendChild(scrollTopBtn);
-    
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            scrollTopBtn.style.display = 'flex';
-        } else {
-            scrollTopBtn.style.display = 'none';
-        }
+  });
+  // close on nav link click
+  menu.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      const spans = btn.querySelectorAll('span');
+      spans[0].style.transform = '';
+      spans[1].style.opacity   = '';
+      spans[2].style.transform = '';
     });
-    
-    scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+  });
+}
+
+// ── SCROLL REVEAL ────────────────────────────────────────────
+function initScrollReveal() {
+  if (!('IntersectionObserver' in window)) {
+    // fallback: show everything immediately
+    document.querySelectorAll('.reveal, .stagger').forEach(el => el.classList.add('visible'));
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
     });
-    
-    scrollTopBtn.addEventListener('mouseover', () => {
-        scrollTopBtn.style.backgroundColor = '#003d7a';
-        scrollTopBtn.style.transform = 'scale(1.1)';
-    });
-    
-    scrollTopBtn.addEventListener('mouseout', () => {
-        scrollTopBtn.style.backgroundColor = '#0066cc';
-        scrollTopBtn.style.transform = 'scale(1)';
-    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el));
 }
 
-// Initialize scroll to top
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeScrollToTop);
-} else {
-    initializeScrollToTop();
-}
+// ── COUNTER ANIMATION ────────────────────────────────────────
+function initCounters() {
+  const counters = document.querySelectorAll('[data-target]');
+  if (!counters.length) return;
 
-// ==========================================
-// ANALYTICS & PAGE TRACKING (Optional)
-// ==========================================
-function trackPageView() {
-    const pageTitle = document.title;
-    const pageURL = window.location.href;
-    console.log(`Viewing: ${pageTitle} - ${pageURL}`);
-    // Add your analytics code here if needed
-}
+  const easeOut = t => 1 - Math.pow(1 - t, 3);
 
-// ==========================================
-// UTILITY FUNCTIONS
-// ==========================================
+  const animateCounter = (el) => {
+    const target   = parseFloat(el.dataset.target);
+    const duration = 1800;
+    const start    = performance.now();
 
-// Copy to clipboard function for citations
-function copyCitation(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        alert('Citation copied to clipboard!');
-    }).catch(err => {
-        console.error('Failed to copy:', err);
-        alert('Failed to copy citation. Please try again.');
-    });
-}
-
-// Format date helper
-function formatDate(date) {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(date).toLocaleDateString('en-US', options);
-}
-
-// ==========================================
-// PERFORMANCE OPTIMIZATION
-// ==========================================
-
-// Debounce function for scroll/resize events
-function debounce(func, delay) {
-    let timeoutId;
-    return function(...args) {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => func.apply(this, args), delay);
+    const tick = (now) => {
+      const elapsed  = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const value    = Math.floor(easeOut(progress) * target);
+      el.textContent = value;
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = target;
     };
-}
+    requestAnimationFrame(tick);
+  };
 
-// ==========================================
-// ERROR HANDLING
-// ==========================================
-window.addEventListener('error', function(event) {
-    console.error('Error:', event.error);
-    // Add error tracking here if needed
-});
+  if (!('IntersectionObserver' in window)) {
+    counters.forEach(animateCounter);
+    return;
+  }
 
-// ==========================================
-// EXPORT FUNCTIONALITY (Future Enhancement)
-// ==========================================
-function exportToCSV(tableId, filename) {
-    const table = document.getElementById(tableId);
-    if (!table) return;
-    
-    let csv = [];
-    const rows = table.querySelectorAll('tr');
-    
-    rows.forEach(row => {
-        const cols = row.querySelectorAll('td, th');
-        let csvRow = [];
-        cols.forEach(col => {
-            csvRow.push(col.textContent);
-        });
-        csv.push(csvRow.join(','));
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        obs.unobserve(entry.target);
+      }
     });
-    
-    downloadCSV(csv.join('\n'), filename);
+  }, { threshold: 0.5 });
+
+  counters.forEach(el => obs.observe(el));
 }
 
-function downloadCSV(csv, filename) {
-    const csvFile = new Blob([csv], { type: 'text/csv' });
-    const downloadLink = document.createElement('a');
-    downloadLink.href = URL.createObjectURL(csvFile);
-    downloadLink.download = filename;
-    downloadLink.click();
+// ── HERO PARTICLES ───────────────────────────────────────────
+function initParticles() {
+  const container = document.getElementById('heroParticles');
+  if (!container) return;
+
+  const count = window.matchMedia('(max-width: 640px)').matches ? 12 : 24;
+
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+
+    const size     = Math.random() * 3 + 2; // 2–5px
+    const left     = Math.random() * 100;
+    const delay    = Math.random() * 12;
+    const duration = Math.random() * 10 + 10; // 10–20s
+    const opacity  = Math.random() * 0.5 + 0.2;
+
+    p.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${left}%;
+      bottom:-${size}px;
+      animation-delay:${delay}s;
+      animation-duration:${duration}s;
+      opacity:${opacity};
+    `;
+    container.appendChild(p);
+  }
 }
 
-// ==========================================
-// PAGE LOAD TIMING (Performance monitoring)
-// ==========================================
-document.addEventListener('load', function() {
-    const perfData = window.performance.timing;
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-    console.log('Page load time:', pageLoadTime, 'ms');
+// ── BAR CHART ANIMATION ──────────────────────────────────────
+function initBarCharts() {
+  const fills = document.querySelectorAll('.bar-fill[data-width]');
+  if (!fills.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    fills.forEach(el => { el.style.width = el.dataset.width + '%'; });
+    return;
+  }
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // small delay to ensure transition fires
+        setTimeout(() => {
+          entry.target.style.width = entry.target.dataset.width + '%';
+        }, 120);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  fills.forEach(el => obs.observe(el));
+}
+
+// ── ACTIVE NAV STATE ─────────────────────────────────────────
+function initNavActiveState() {
+  const current = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === current) link.classList.add('active');
+    else link.classList.remove('active');
+  });
+}
+
+// ── SMOOTH ANCHOR SCROLL ─────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id === '#') return;
+    const target = document.querySelector(id);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
 });
-
-// ==========================================
-// DOCUMENT READY CHECK
-// ==========================================
-console.log('Liquid Biopsy Research - JavaScript initialized');
